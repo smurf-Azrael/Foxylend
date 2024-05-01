@@ -7,7 +7,7 @@ import discordIcon from "@/public/discord.svg"
 import xIcon from "@/public/x.svg"
 import { fetchStatistic } from "@/services/common/fetchStatistic"
 
-import StatisticContainer from "@/components/common/statistic-contianer"
+import { Button } from "@/components/ui/button"
 
 export default function IndexPage() {
   const [totalStaked, setTotalStaked] = useState(0)
@@ -26,30 +26,22 @@ export default function IndexPage() {
   }, [])
   return (
     <section className="container pb-3 pt-6 md:py-10">
-      <div className="mt-32">
-        <h1 className="text-shadow mx-auto text-center font-bebas text-5xl text-custom sm:text-7xl md:text-8xl lg:text-9xl">
-          STEIK YOUR FOXES
+      <div className="mt-20">
+        <h1 className="text-shadow font-inria mx-auto text-center text-5xl text-custom sm:text-6xl md:text-7xl lg:text-9xl">
+          BORROW AND LEND AGAINST YOUR NFTS
         </h1>
-        <div className="mx-auto mt-3 flex flex-wrap justify-center gap-8 sm:mt-4 sm:justify-between md:mt-8 md:max-w-3xl lg:mt-10 xl:max-w-5xl">
-          <StatisticContainer
-            number={totalStaked}
-            content={"Foxes staked"}
-            loading={statisticLoading}
-          />
-          {/* <StatisticContainer
-            number={15641}
-            content={"Daily points"}
-            loading={statisticLoading}
-          /> */}
-          <StatisticContainer
-            number={totalClaimedPoints}
-            content={"Total points"}
-            loading={statisticLoading}
-          />
-        </div>
       </div>
-      <div className="mt-44 flex items-center justify-center gap-16 ">
-        <Link href="/" className="flex items-center space-x-2 ">
+      <div className="mt-20 flex items-center justify-center gap-16 ">
+        <Button
+          variant={"gray"}
+          className="whitespace-nowrap px-12 py-8 text-lg font-bold md:text-xl"
+        >
+          LEND
+        </Button>
+        <Button className="whitespace-nowrap px-12 py-8 text-lg font-bold md:text-xl">
+          BORROW
+        </Button>
+        {/* <Link href="/" className="flex items-center space-x-2 ">
           <Image
             src={xIcon}
             alt="Fox Logo"
@@ -62,7 +54,7 @@ export default function IndexPage() {
             alt="Fox Logo"
             className="size-4 md:size-6 lg:size-8"
           />
-        </Link>
+        </Link> */}
       </div>
     </section>
   )

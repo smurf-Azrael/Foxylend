@@ -293,7 +293,7 @@ export default function Steik() {
 
   return (
     <section className="px-16 pb-3 pt-6">
-      <p className="font-bebas text-2xl font-bold text-custom sm:text-3xl md:text-4xl xl:text-5xl">
+      <p className=" text-2xl font-bold text-custom sm:text-3xl md:text-4xl xl:text-5xl">
         SELECT NFTS TO {mode === "steik" ? "STEIK" : "UNSTEIK"}
       </p>
       <div className="mt-5 grid w-full grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5 ">

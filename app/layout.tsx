@@ -3,7 +3,7 @@ import { Metadata } from "next"
 import { Toaster } from "react-hot-toast"
 
 import { siteConfig } from "@/config/site"
-import { fontBebas, fontSans } from "@/lib/fonts"
+import { fontBebas, fontExo2, fontInria, fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/header/site-header"
 import { SeiProvider } from "@/components/sei-provider"
@@ -38,9 +38,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen bg-[#FDF0D5] font-sans antialiased",
+            "font-exo2 min-h-screen bg-[#181616] text-white antialiased",
             fontSans.variable,
-            fontBebas.variable
+            fontBebas.variable,
+            fontExo2.variable,
+            fontInria.variable
           )}
         >
           <SeiProvider

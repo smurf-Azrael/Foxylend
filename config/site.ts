@@ -1,25 +1,25 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Steik",
+  name: "Foxylend",
   description:
     "Steik is of its kind staking platform with realtime points mechanism on Sei Network. Steik. Accumulate. Get rewarded.",
   mainNav: [
     {
-      title: "Home",
-      href: "/dashboard",
+      title: "Lend",
+      href: "/lend",
     },
     {
-      title: "Claim points",
-      href: "/stats",
+      title: "My Offer",
+      href: "/offer",
     },
     {
-      title: "Stats",
-      href: "/stats",
+      title: "Borrow",
+      href: "/borrow",
     },
     {
-      title: "Leaderboard",
-      href: "/leaderboard",
+      title: "My loans",
+      href: "/loans",
     },
   ],
   links: {

@@ -34,9 +34,7 @@ export default function MobileMenu({ children }: MobileMenuProps) {
                     href={item.href}
                     className={cn("mt-5 flex items-center text-lg")}
                   >
-                    <p className="font-bebas  text-3xl text-custom">
-                      {item.title}
-                    </p>
+                    <p className=" text-3xl text-custom">{item.title}</p>
                   </Link>
                 )
             )

@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        custom: "#003049",
+        custom: "white",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -57,6 +57,8 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         bebas: ["var(--font-bebas)"],
+        exo2: ["var(--font-exo2)"],
+        inria: ["var(--font-inria)"],
       },
       fontSize: {
         "custom-lg": "108px", // Add your custom font size with a key/name

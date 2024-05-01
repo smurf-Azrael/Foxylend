@@ -1,7 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import foxLogoSVG from "@/public/foxes-logo.svg"
+import foxLogoSVG from "@/public/foxylend-logo.svg"
 
 import { NavItem } from "@/types/nav"
 import { cn } from "@/lib/utils"
@@ -14,7 +14,11 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex w-full gap-6 md:gap-10">
       <Link href="/" className="flex items-center space-x-2">
-        <Image src={foxLogoSVG} alt="Fox Logo" className="size-36 sm:size-48" />
+        <Image
+          src={foxLogoSVG}
+          alt="Fox Logo"
+          className="m-10 size-24 sm:size-32"
+        />
       </Link>
       {items?.length ? (
         <nav className="ml-auto mr-20 hidden gap-6 lg:flex">
@@ -25,7 +29,7 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center text-lg font-semibold text-custom",
+                    "flex items-center text-lg  text-custom",
                     item.disabled && "cursor-not-allowed opacity-80"
                   )}
                 >

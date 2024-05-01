@@ -36,14 +36,14 @@ export default function NFTContainer({
     }, [])
 
     const getWidth = (): number => {
-      if (screenSize >= 1024) return 56 // lg size
-      if (screenSize >= 640) return 48 // sm size
-      return 36 // base size
+      if (screenSize >= 1024) return 36 // lg size
+      if (screenSize >= 640) return 32 // sm size
+      return 24 // base size
     }
 
     // Use the `image` directly in the src
     return (
-      <img src={image} alt={alt} className="size-36 sm:size-48 lg:size-56" />
+      <img src={image} alt={alt} className="size-16 sm:size-20 lg:size-24" />
     )
   }
   const PIC_URL =
@@ -61,11 +61,11 @@ export default function NFTContainer({
         alt="Fox Logo"
         // className="size-36 sm:size-48 lg:size-56"
       />
-      <div className="my-2 flex items-end md:mb-3 md:mt-2 lg:mb-4 lg:mt-3">
-        <span className="text-lg !leading-none text-custom md:text-xl xl:text-2xl ">
+      <div className="my-2 flex items-end ">
+        <span className="xl:text-md text-sm !leading-none text-[#000000] md:text-sm ">
           FudFox
         </span>
-        <span className="xl:text-md text-end text-xs !leading-none text-custom md:text-sm">
+        <span className="xl:text-md text-end text-xs  !leading-none text-[#000000] md:text-sm">
           {title}
         </span>
       </div>

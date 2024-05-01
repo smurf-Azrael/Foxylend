@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import SeiIcon from "@/public/sei.svg"
 import {
   WalletConnectButton,
@@ -10,6 +11,8 @@ import {
   useWallet,
 } from "@sei-js/react"
 import { AlignRight } from "lucide-react"
+import discordIcon from "public/discord.svg"
+import xIcon from "public/twitter.svg"
 
 import { siteConfig } from "@/config/site"
 import { Button, buttonVariants } from "@/components/ui/button"
@@ -52,9 +55,9 @@ export function SiteHeader() {
         <MainNav items={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="ml-16 flex items-center space-x-1">
-            <div className=" flex w-44 justify-center gap-2 rounded-md bg-[#003049] px-2 py-1 shadow shadow-black/25 hover:bg-[#003049] ">
+            <div className=" flex w-44 justify-center gap-2 rounded-md bg-[#FBEB5F] px-2 py-1 shadow shadow-black/25 hover:bg-[#FBFB5F] ">
               {connectedWallet ? <Image src={SeiIcon} alt="sei" /> : <></>}
-              <WalletConnectButton buttonClassName="text-center text-[20px] text-[#FDF0D5]  capitalize  whitespace-nowrap" />
+              <WalletConnectButton buttonClassName="text-center text-[20px] text-[#000000]  capitalize  whitespace-nowrap" />
             </div>
             <MobileMenu>
               <Button variant="ghost" size="icon" className="ml-2 lg:hidden">
@@ -62,6 +65,22 @@ export function SiteHeader() {
               </Button>
             </MobileMenu>
           </nav>
+        </div>
+        <div className="mx-2 flex min-w-24 justify-center gap-2">
+          <Link href="/" className="flex items-center space-x-2 ">
+            <Image
+              src={xIcon}
+              alt="Fox Logo"
+              className=" size-8 rounded-full bg-white p-1"
+            />
+          </Link>
+          <Link href="/" className="flex items-center space-x-2  ">
+            <Image
+              src={discordIcon}
+              alt="Fox Logo"
+              className=" size-8 rounded-full bg-white p-1"
+            />
+          </Link>
         </div>
       </div>
     </header>
